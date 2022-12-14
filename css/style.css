@@ -1,4 +1,4 @@
-@import url('https://fonts.cdnfonts.com/css/netflix-font');
+/* @import url('https://fonts.cdnfonts.com/css/netflix-font'); */
 
 *{
     margin: 0;
@@ -64,6 +64,9 @@ header::before{
     margin-top: 0.5rem;
     margin-right: 32px;
 }
+.rightNav .lang:hover{
+    background-color: #e50914;
+}
 .rightNav a{
     background-color: #e50914;
     float: right;
@@ -77,57 +80,53 @@ header::before{
     text-decoration: none;
 }
 
-.middleNav{
+header .middleForm{
+    color: white;
     width: 100%;
-    height: 70vh;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    top: -100px;
+    align-items: center;
+    justify-content: center;
+}
+.middleForm form{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    position: relative;
-    top:-50px;
-    z-index: 1;
-    color: white;
-    gap: 16px;
+    gap: 20px;
 }
-.middleNav h1{
-    font-size: 4.2rem;
+.middleForm form h1{
+    font-size: 68px;
     text-align: center;
 }
 
-.middleNav p{
-    font-size: 1.7rem;
-    font-weight: 500;
+.middleForm form p{
+    font-size: 28px;
 }
-
-.middleNav #readyWatch{
-    font-size: 1.2rem;
-    font-weight: 500;
+.middleForm form label{
+    font-size: 20px;
 }
-.middleNav form .input{
-    margin-top: 24px;
-    width: 340px;
-    height: 72px;
-    margin-left: -70px;
+.middleForm form input{
+    width: 550px;
+    height: 70px;
+    padding: 20px;
+    border: none;
+}
+.inputAndButton{
     display: flex;
     align-items: center;
+    justify-content: center;
 }
+.middleForm form button{
 
-.input input{
-    min-width: 500px;
-    height: 72px;
-    padding-left: 10px;
-}
-.input button{
-    min-width: 280px;
-    height: 72px;
-    font-size: 32px;
     color: white;
-    border: 1px solid #e50914;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    background-color: #e50914;
+    font-size: 24px;
+    width: 160px;
+    height: 70px;
+    border: 1px solid black;
+    background: #e50914;
 }
 
 /* sections settings start here */
@@ -147,6 +146,17 @@ section .tvWrapper{
     
 
 }
+
+.section2 {
+    position: relative;
+}
+.section2 .desktop video{
+    position: absolute;
+    width: 390px;
+    top: 550px;
+    right: 420px;
+}
+
 section .tvInfo{
     width: 505px;
     height: 180px;
@@ -195,6 +205,7 @@ ul li button{
     justify-content:space-between;
     align-items: center;
     text-align: left;
+    cursor: pointer;
 }
 ul li button span{
     font-size: 60px;
@@ -202,6 +213,13 @@ ul li button span{
 }
 
 ul li p{
+    font-size: 18px;
+    line-height: 28px;
+    width: 800px;
+    height: fit-content;
+    padding: 10px;
+    margin-top: 5px;
+    background: #303030;
     display: none;
 }
 section form{
@@ -222,12 +240,14 @@ section form .bottomInput{
     width: 100%;
     height: fit-content;
     display: flex;
+    justify-content: center;
 }
 .bottomInput input{
     width: 650px;
     height: 60px;
     padding-left: 10px;
     margin-top: 20px;
+    border: none;
 }
 .bottomInput button{
     width: 200px;
@@ -263,9 +283,216 @@ footer .linkWrapper .box{
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
+    
 }
 
 footer .linkWrapper .box a{
     color: #686767;
     text-decoration: none;
+}
+
+@media only screen and (max-width:1260px){
+    section{
+        padding: 60px 0;
+        height: fit-content;
+    }
+    .tvWrapper{
+        height: fit-content;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .tvWrapper img{
+        width: 400px;
+        height: 300px;
+    }
+    .tvWrapper .tvInfo h2{
+        margin-top: 40px;
+        font-size: 32px;
+    }
+    .tvWrapper .tvInfo p{
+        font-size: 18px;
+    }
+    footer{
+        justify-content: space-evenly;
+    }
+}
+@media only screen and (max-width:900px) {
+    .navbar img{
+        width: 100px;
+        height: 80px;
+    }
+    .rightNav .lang,a{
+        width: 85px;
+        height: 35px;
+    }
+    /*  middle form responsive design */
+    .middleForm form h1{
+        font-size: 3.2rem;
+    }
+    .middleForm form p{
+        font-size: 1.6rem;
+    }
+    .middleForm form label{
+        font-size: 1.3rem;
+    }
+
+    .section5 form .readytowatch {
+        font-size: 20px;
+    }
+
+    .middleForm form .inputAndButton input{
+        max-width: 350px;
+        height: 50px;
+    }
+    .middleForm form .inputAndButton button{
+        font-size: 16px;
+        font-weight: 600;
+        width: 110px;
+        height: 50px;
+    }
+    /* ----------------------------------------------------- */
+    ul li button{
+        width: 500px;
+        height: 60px;
+    }
+    ul li p{
+        width: 500px;
+    }
+
+    .bottomInput input{
+        max-width: 350px;
+        height: 60px;
+    }
+    .bottomInput button{
+        font-size: 20px;
+        width: 150px;
+    }
+}
+@media only screen and (max-width:780px) {
+
+    .middleForm form h1{
+        font-size: 2.7rem;
+    }
+    .middleForm form p{
+        font-size: 1.3rem;
+    }
+    .middleForm form label{
+        font-size: 1.0rem;
+    }
+
+    
+    .middleForm form .inputAndButton input{
+        max-width: 350px;
+        height: 45px;
+    }
+    .middleForm form .inputAndButton button{
+        font-size: 16px;
+        font-weight: 600;
+        width: 110px;
+        height: 47px;
+    }
+    .section5 h1 {
+        font-size: 2.2rem;
+    }
+    
+    ul li button{
+        font-size: 1.2rem;
+        width: 450px;
+        height: 40px;
+    }
+    ul li p{
+        width: 450px;
+    }
+
+    .input input{
+        margin: 50px 0 0 50px;
+        min-width: 250px;
+        height: 50px;
+        justify-content: center;
+    }
+    .input button{
+        margin: 50px 0 0 0;
+        font-size: 18px;
+        min-width: 150px;
+        height: 50px;
+    }
+}
+@media only screen and (max-width:580px) {
+
+    
+    .middleForm form h1{
+        font-size: 2rem;
+    }
+    .middleForm form p{
+        font-size: 1rem;
+    }
+    .middleForm form label{
+        font-size: 0.8rem;
+    }
+
+    
+    .middleForm form .inputAndButton input{
+        max-width: 300px;
+        height: 40px;
+    }
+    .middleForm form .inputAndButton button{
+        font-size: 15px;
+        font-weight: 600;
+        width: 100px;
+        height: 42px;
+    }
+    section{
+        padding: 0;
+    }
+
+    .tvWrapper img{
+        width: 300px;
+        height: 250px;
+    }
+    .tvInfo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .tvWrapper .tvInfo h2{
+        width: 300px;
+        margin-top: 40px;
+        font-size: 28px;
+        text-align: center;
+    }
+    .tvWrapper .tvInfo p{
+        font-size: 16px;
+        width:250px;
+    }
+    .section5 h1 {
+        font-size: 1.6rem;
+    }
+    .section5 .readytowatch{
+        font-size: 16px;
+    }
+    ul li button{
+        font-size: 1rem;
+        width: 350px;
+        height: 40px;
+    }
+    ul li button > span{
+        font-size: 1rem;
+    }
+    ul li p{
+        width: 350px;
+    }
+
+    .bottomInput input{
+        width: 250px;
+        height: 30px;
+    }
+    .bottomInput button{
+        font-size: 16px;
+        font-weight: 600;
+        width: 110px;
+        height: 30px;
+    }
+
 }
